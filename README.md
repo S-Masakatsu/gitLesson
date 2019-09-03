@@ -1,6 +1,14 @@
 # GitLesson
 
-## ■ gitとは
+<h2 id="contents-list">■ 項目</h2>
+
+- __<a href="#ttl">gitとは</a>__
+- __<a href="#ttl0">インストール</a>__
+- __<a href="#ttl1">git Lesson１</a>__
+
+---
+
+<h2 id="ttl">■ gitとは</h2>
 
 バージョン管理システム  
 
@@ -10,7 +18,7 @@
     - Linux
     - コマンド
 
-## バージョン管理の流れ
+### バージョン管理の流れ
 
 1. ファイル作成・修正
 1. ある程度のまとまりにする
@@ -23,7 +31,9 @@
     作業経過を保存しておく
 1. リポジトリ(ローカル・リモート)
 
-## ■ ０, インストール
+<p><a href="#contents-list">↑項目一覧へ</a></p>
+
+<h2 id="ttl0">■ ０, インストール</h2>
 
 - Mac
 
@@ -34,7 +44,9 @@
 - Windows  
     [https://gitforwindows.org](https://gitforwindows.org)からmsysgitの最新版のインストール
 
-## ■ git Lesson１
+<p><a href="#contents-list">↑項目一覧へ</a></p>
+
+<h2 id="ttl1">■ git Lesson１</h2>
 
 ---
 
@@ -76,3 +88,46 @@
     $git help config
     ```
 
+## ● 1-2, gitを使う準備
+
+1. まずはディレクトリを作ろう。
+
+    ``` shell
+    $mkdir gitLesson
+    $cd gitLesson
+    ```
+
+1. gitを使う準備をします。
+
+    ``` shell
+    $git init
+    ```
+
+これで準備は終了です。  
+`git init` で、ファイルの変更や履歴の情報をつかさどる「リポジトリ」が作成される。  
+リポジトリは、.gitというディレクトリで管理される。  
+つまり.gitを削除するとリポジトリの情報は消えるということ。
+
+## ● 1-3, ファイルを追加する
+
+### コミット
+
+``` shell
+$git add .
+$git commit -m "コミットメッセージ"
+```
+
+1. 新規ファイルの作成
+
+    ``` shell
+    $echo "Hello git ver2" > Sample02.txt
+    ```
+
+1. __コミット__ : Sample.txtをコミット
+
+    ``` shell
+    $git add Sample02.txt
+    $git commit -m "Add Sample02.txt"
+    ```
+
+<p><a href="#contents-list">↑項目一覧へ</a></p>
