@@ -117,6 +117,10 @@ $git add .
 $git commit -m "コミットメッセージ"
 ```
 
+ファイルを記録し、履歴として参照できる状態にすることを、**コミット**と言います。  
+`commit`の直前に行っている`add`は、ファイルをコミットの対象に追加するという感じ。  
+`add`していない修正は、`commit`を実行してもコミットされない。
+
 1. 新規ファイルの作成
 
     ``` shell
@@ -129,5 +133,27 @@ $git commit -m "コミットメッセージ"
     $git add Sample02.txt
     $git commit -m "Add Sample02.txt"
     ```
+
+## ● 1-4, ファイルを修正する
+
+1. ファイルを修正  
+    `/Sample.txt` を開いて修正してください。  
+
+1. コミットする
+
+    ``` shell
+    $git add Sample.txt
+    $git commit -m "Add Sample.txt"
+    ```
+
+これで修正したファイルを記録できました。
+
+## ● 1-5, ファイルを削除する
+
+1. ファイルを削除する
+
+``` shell
+$rm -i Sample02.txt
+```
 
 <p><a href="#contents-list">↑項目一覧へ</a></p>
