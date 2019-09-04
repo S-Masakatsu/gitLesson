@@ -1,6 +1,6 @@
 # GitLesson
 
-<h2 id="contents-list">■ 項目</h2>
+<h1 id="contents-list">■ 項目</h1>
 
 - __<a href="#ttl">gitとは</a>__
 - __<a href="#ttl0">インストール</a>__
@@ -8,7 +8,7 @@
 
 ---
 
-<h2 id="ttl">■ gitとは</h2>
+<h1 id="ttl">■ gitとは</h1>
 
 バージョン管理システム  
 
@@ -33,7 +33,7 @@
 
 <p><a href="#contents-list">↑項目一覧へ</a></p>
 
-<h2 id="ttl0">■ ０, インストール</h2>
+<h1 id="ttl0">■ ０, インストール</h1>
 
 - Mac
 
@@ -46,11 +46,9 @@
 
 <p><a href="#contents-list">↑項目一覧へ</a></p>
 
-<h2 id="ttl1">■ git Lesson１</h2>
+<h1 id="ttl1">■ git Lesson１</h1>
 
----
-
-## ● 1-1, gitの設定
+<h2 id="ttl1-1">● 1-1, gitの設定</h2>
 
 - コミット時のAuthorの変更
 
@@ -152,8 +150,48 @@ $git commit -m "コミットメッセージ"
 
 1. ファイルを削除する
 
+    ``` shell
+    $rm -i Sample02.txt
+    ```
+
+1. ファイル削除をコミットする
+
+    ``` shell
+    $git rm Sample02.text
+    $git commit -m "remove Sample02.txt"
+    ```
+
+これでファイルを削除し、コミットすることができる。
+
+## ● 1-6, 修正履歴(ログ)を確認する
+
+1. ログを確認する
+
+    ``` shell
+    $git log
+    ```
+
+修正履歴(ログ)を確認することができる。  
+ページが１ページで収まらない時は、  
+`スペース`で改ページ、`q` で終了する。
+
+### ● ログの見方
+
 ``` shell
-$rm -i Sample02.txt
+commit 5cdb8db1fcf49d00d264bea2d04efc56a6cede59 #①
+Author: hoge <gitLesson@gmail.com>              #②
+Date:   Tue Sep 3 21:01:16 2019 +0900           #③
+
+    Add Hello git   #④
+
 ```
+
+1. Revision : コミット番号  
+    修正の履歴を一意に特定するハッシュ値が割り振られる。
+1. Author : 修正者の情報  
+    <a href="#ttl1-1">1-1, gitの設定</a>の`config`で設定できる。
+1. Date : コミットした時刻
+1. Message : コミットメッセージ  
+    修正内容の概要
 
 <p><a href="#contents-list">↑項目一覧へ</a></p>
