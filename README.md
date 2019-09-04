@@ -171,9 +171,9 @@ $git commit -m "コミットメッセージ"
     $git log
     ```
 
-修正履歴(ログ)を確認することができる。  
-ページが１ページで収まらない時は、  
-`スペース`で改ページ、`q` で終了する。
+    修正履歴(ログ)を確認することができる。  
+    ページが１ページで収まらない時は、  
+    `スペース`で改ページ、`q` で終了する。
 
 ### ● ログの見方
 
@@ -193,5 +193,47 @@ Date:   Tue Sep 3 21:01:16 2019 +0900           #③
 1. Date : コミットした時刻
 1. Message : コミットメッセージ  
     修正内容の概要
+
+## ● 1-7, ステータスを確認する
+
+1. ステータスを確認する
+
+    ``` shell
+    $git status
+    ```
+
+    現在の作業状況を確認できる。  
+    ファイルの追加・修正・削除・addを行ってstatusがどう変化するか確認する。
+
+### ● statusの見方
+
+``` shell
+On branch master    # ①
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:    # ②
+  (use "git restore --staged <file>..." to unstage)
+	modified:   hoge.text
+
+Changes not staged for commit:  # ③
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+
+	modified:   Sample.txt
+
+Untracked files:    # ④
+  (use "git add <file>..." to include in what will be committed)
+
+	a.txt
+```
+
+1. 作業ブランチ
+1. `Changes to be committed:`  
+    コミットする準備ができた修正。(addしたもの)  
+    ステージングされてインデックスに登録された修正をリストアップされる。
+1. `Changes not staged for commit:`  
+    ステージングされていない、インデックス未登録のワーキングツリーの修正がリストアップされる。(addされる前)
+1. `Untracked files:`  
+    gitで管理する対象になっていない新しいファイル。
 
 <p><a href="#contents-list">↑項目一覧へ</a></p>
