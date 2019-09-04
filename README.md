@@ -108,12 +108,12 @@
 
 ## ● 1-3, ファイルを追加する
 
-### コミット
+### ・ コミット
 
-``` shell
-$git add .
-$git commit -m "コミットメッセージ"
-```
+    ``` shell
+    $git add .
+    $git commit -m "コミットメッセージ"
+    ```
 
 ファイルを記録し、履歴として参照できる状態にすることを、**コミット**と言います。  
 `commit`の直前に行っている`add`は、ファイルをコミットの対象に追加するという感じ。  
@@ -175,7 +175,7 @@ $git commit -m "コミットメッセージ"
     ページが１ページで収まらない時は、  
     `スペース`で改ページ、`q` で終了する。
 
-### ● ログの見方
+### ・ ログの見方
 
 ``` shell
 commit 5cdb8db1fcf49d00d264bea2d04efc56a6cede59 #①
@@ -205,7 +205,7 @@ Date:   Tue Sep 3 21:01:16 2019 +0900           #③
     現在の作業状況を確認できる。  
     ファイルの追加・修正・削除・addを行ってstatusがどう変化するか確認する。
 
-### ● statusの見方
+### ・ statusの見方
 
 ``` shell
 On branch master    # ①
@@ -213,7 +213,7 @@ Your branch is up to date with 'origin/master'.
 
 Changes to be committed:    # ②
   (use "git restore --staged <file>..." to unstage)
-	modified:   hoge.text
+	modified:   hoge.txt
 
 Changes not staged for commit:  # ③
   (use "git add <file>..." to update what will be committed)
@@ -224,7 +224,7 @@ Changes not staged for commit:  # ③
 Untracked files:    # ④
   (use "git add <file>..." to include in what will be committed)
 
-	a.txt
+	hoge_hohe.txt
 ```
 
 1. 作業ブランチ
@@ -235,5 +235,19 @@ Untracked files:    # ④
     ステージングされていない、インデックス未登録のワーキングツリーの修正がリストアップされる。(addされる前)
 1. `Untracked files:`  
     gitで管理する対象になっていない新しいファイル。
+
+### ・ 状態の繊維
+
+`git status` で修正がどのように扱われている状態なのか確認できます。  
+ファイルが修正されコミットされるまでの間に、gitでは３つの状態を行き来します。  
+`commit`の前に`add`があるのはそのため。
+
+- __ワーキングツリー__  
+    現在作業している実ファイル。
+- __インデックス__  
+    コミットするための情報を登録する場所を指す。  
+    インデックスに登録されたものだけがコミットできる。
+- __ローカルリポジトリ__  
+    コミットの情報が記録される場所。
 
 <p><a href="#contents-list">↑項目一覧へ</a></p>
