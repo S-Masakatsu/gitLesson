@@ -6,7 +6,6 @@
 - __<a href="#ttl0">インストール</a>__
 - __<a href="#ttl1">git Lesson１</a>__
 - __<a href="#ttl2">git Lesson２</a>__
-- __<a href="#ttl3">git Lesson３</a>__
 
 ---
 
