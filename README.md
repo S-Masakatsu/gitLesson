@@ -466,9 +466,3 @@ $ git checkout <RevisionNumber>
 ```
 
 <p><a href="#contents-list">↑項目一覧へ</a></p>
-
-<h1 id="ttl3">■ git Lesson３</h1>
-
-## ● 3-1, 
-
-<p><a href="#contents-list">↑項目一覧へ</a></p>
