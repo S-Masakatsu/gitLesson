@@ -6,6 +6,7 @@
 - __<a href="#ttl0">インストール</a>__
 - __<a href="#ttl1">git Lesson１</a>__
 - __<a href="#ttl2">git Lesson２</a>__
+- __<a href="#ttl3">git Lesson３</a>__
 
 ---
 
@@ -293,7 +294,7 @@ $ git help <command>
 |範囲|オプション|場所|
 |---|---|---|
 |システム全体|`--system`|`/etc/gitconfig`|
-|特定のユーザー|`--global`|`~/gitconfig`or`~/.config/git/config`|
+|特定のユーザー|`--global`|`~/gitconfig` or `~/.config/git/config`|
 |リポジトリ固有|`--local`(デフォルト)|`repository/.git/config`|
 
 設定は、  
@@ -323,7 +324,7 @@ gitで管理しないファイルを指定するには、`.gitignore` という�
 
 1. .DS_Storeを除外する  
 
-    `.gitignore`
+    `/.gitignore`
 
     ``` .gitignore
     # mac用
@@ -463,5 +464,11 @@ HEADは現在の作業ブランチの先頭コミットの別称。
 ``` shell
 $ git checkout <RevisionNumber>
 ```
+
+<p><a href="#contents-list">↑項目一覧へ</a></p>
+
+<h1 id="ttl3">■ git Lesson３</h1>
+
+## ● 3-1, 
 
 <p><a href="#contents-list">↑項目一覧へ</a></p>
